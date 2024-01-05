@@ -1,0 +1,22 @@
+---
+const {title} = Astro.props
+---
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <p id="text">{title}</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style lang="scss">
+    footer{
+        min-height: 26px;
+    }
+</style>
+
+<script>
+    document.querySelector('#text').innerHTML = `© ${new Date().getFullYear()} ARTIJO.`;
+</script>
