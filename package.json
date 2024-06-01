@@ -1,7 +1,7 @@
 {
   "name": "artijo-cv",
   "type": "module",
-  "version": "0.1.1",
+  "version": "1.1.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

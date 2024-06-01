@@ -1,8 +1,8 @@
 ---
 const nav = [
     { name: 'Blog', url: 'https://blog.artijo.com/' },
-    { name: 'Dev Blog', url: 'https://dev.artijo.com/' },
-    { name: 'Projects (Github)', url: 'https://github.com/artijo' },
+    { name: 'Dev', url: 'https://dev.artijo.com/' },
+    { name: 'Projects(Github)', url: 'https://github.com/artijo' },
     { name: 'Photo', url: '/' },
 ]
 ---
@@ -19,7 +19,7 @@ const nav = [
     <br/>
         <h6>Bachelor Student (Information Technology College of Computing Khon Kaen University)</h6>
     <br/><br/>
-    <nav class="flex gap-2">
+    <nav class="flex gap-4">
         {nav.map((item, index) => (
             <a href={item.url}>{item.name}</a>
         ))}
