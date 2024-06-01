@@ -1,5 +1,4 @@
 ---
-import Footer from "../components/Footer.astro";
 interface Props {
 	title: string;
 }
@@ -13,14 +12,18 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="robots" content="noindex" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="stylesheet" href="/fonts/LineSeed/font.css" id="font">
 		<script defer src="https://stats.artijo.com/script.js" data-website-id="f213b9d4-02e8-4dc6-b220-19d28aaa17fe"></script>
 		<title>{title}</title>
+		<script>
+			import AOS from "aos";
+			AOS.init();
+		</script>
 	</head>
 	<body class="dark:text-gray-400 dark:bg-gray-800">
 		<slot />
-		<!-- <Footer title={title} /> -->
 	</body>
 </html>
 <style is:global>

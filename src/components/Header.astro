@@ -1,0 +1,34 @@
+---
+const nav = [
+    { name: 'Blog', url: 'https://blog.artijo.com/' },
+    { name: 'Dev Blog', url: 'https://dev.artijo.com/' },
+    { name: 'Projects (Github)', url: 'https://github.com/artijo' },
+    { name: 'Photo', url: '/' },
+]
+---
+<header>
+    <div class="lg:flex md:flex items-center justify-between">
+        <div>
+            <h3>Apichai Tinjong</h3>
+            <h5 class="-mt-2">อภิชัย ทินจอง</h5>
+        </div>
+        <p>Web Developer</p>
+    </div>
+    
+    
+    <br/>
+        <h5>Bachelor Student (Information Technology College of Computing Khon Kaen University)</h5>
+    <br/><br/>
+    <nav class="flex gap-2">
+        {nav.map((item, index) => (
+            <a href={item.url}>{item.name}</a>
+        ))}
+    </nav>
+    <br/>
+</header>
+
+<style lang="scss">
+    a {
+        @apply text-blue-500 dark:text-blue-300;
+    }
+</style>

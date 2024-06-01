@@ -2,21 +2,14 @@
 const {title} = Astro.props
 ---
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-right">
-                <p id="text">{title}</p>
-            </div>
-        </div>
-    </div>
+    <p>Contact: <a href="mailto:a@artijo.com">a[AT]artijo.com</a></p>
 </footer>
 
 <style lang="scss">
     footer{
         min-height: 26px;
     }
+    a {
+        @apply text-blue-500 dark:text-blue-300;
+    }
 </style>
-
-<script>
-    document.querySelector('#text').innerHTML = `© ${new Date().getFullYear()} ARTIJO.`;
-</script>
