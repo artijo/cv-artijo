@@ -14,7 +14,6 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="robots" content="noindex" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="stylesheet" href="/fonts/LineSeed/font.css" id="font">
 		<script defer src="https://stats.artijo.com/script.js" data-website-id="f213b9d4-02e8-4dc6-b220-19d28aaa17fe"></script>
 		<title>{title}</title>
 	</head>
@@ -34,6 +33,45 @@ const { title } = Astro.props;
 			white 60%
 		);
 	}
+	@font-face {
+    font-family: 'line_seed';
+    src: url('/fonts/LineSeed/lineseedsansth_bd-webfont.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+	font-display: fallback;
+}
+@font-face {
+    font-family: 'line_seed';
+    src: url('/fonts/LineSeed/lineseedsansth_he-webfont.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+	font-display: fallback;
+
+}
+@font-face {
+    font-family: 'line_seed';
+    src: url('/fonts/LineSeed/lineseedsansth_rg-webfont.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+	font-display: fallback;
+
+}
+@font-face {
+    font-family: 'line_seed';
+    src: url('/fonts/LineSeed/lineseedsansth_th-webfont.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+	font-display: fallback;
+
+}
+@font-face {
+    font-family: 'line_seed';
+    src: url('/fonts/LineSeed/lineseedsansth_xbd-webfont.woff2') format('woff2');
+    font-weight: 950;
+    font-style: normal;
+	font-display: fallback;
+
+}
 	html {
 		font-family: "line_seed", sans-serif;
 	}
