@@ -15,16 +15,16 @@ const nav = [
         <p>Web Developer</p>
     </div>
     
-    
-    <br/>
-        <h6>Bachelor Student (Information Technology College of Computing Khon Kaen University)</h6>
-    <br/><br/>
+    <br />
+        <h6>Bachelor of Science Program in Information Technology</h6>
+    <br class="_br"/><br class="_br"/>
     <nav class="flex gap-4">
         {nav.map((item, index) => (
             <a href={item.url}>{item.name}</a>
         ))}
+        <button>Print</button>
     </nav>
-    <br/>
+    <br class="_br"/>
 </header>
 
 <style lang="scss">
@@ -32,3 +32,22 @@ const nav = [
         @apply text-blue-500 dark:text-blue-300;
     }
 </style>
+
+<script>
+    // print button
+    document.querySelector('button').addEventListener('click', () => {
+        //disable nav
+        document.querySelector('nav').style.display = 'none';
+        // disable class _be
+        (document.querySelector('._br') as HTMLElement).style.display = 'none';
+        //print page size A4
+        document.body.style.width = '210mm';
+        document.body.style.height = '297mm';
+        window.print();
+        //enable nav
+        document.querySelector('nav').style.display = 'flex';
+        // enable class _be
+        (document.querySelector('._br') as HTMLElement).style.display = 'block';
+
+    });
+</script>
